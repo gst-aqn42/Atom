@@ -6,18 +6,22 @@
 
 class Naves{
  private:
-    double distNaveProx = 0.0; double enerArmaz = 0.0; StrPonto *calcSalto; 
-    StrPonto *pontProx;
+    double distNaveProx = 0.0; double enerArmaz = 0.0; double raioAlcance = 0.0;
+    StrPonto *calcSalto; 
 
  public:
     static int _identificador;
 
     Naves(double x, double y);
-    ~Ponto();
+    ~Naves();
 
     StrPonto nextSpaceship();
 };
 
-
+//Struct que faz um ponto
+struct StrPonto{
+    double x; double y;
+    int id = 0;
+};
 
 #endif

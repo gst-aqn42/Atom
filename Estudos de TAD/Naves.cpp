@@ -4,7 +4,7 @@
 
 int Naves::_identificador = 0;
 //Construtor e destrutor de um ponto
-Ponto::Ponto(double x, double y){
+Naves::Naves(double x, double y){
    StrPonto Ponto;
    Ponto.x = x; Ponto.y = y;
    Ponto.id = _identificador;
@@ -13,7 +13,7 @@ Ponto::Ponto(double x, double y){
    _identificador++;
 }
 
-Naves::~Ponto(){
+Naves::~Naves(){
 }
 
 
@@ -25,8 +25,4 @@ StrPonto Naves::nextSpaceship(){
    
 }
 
-//Struct que faz um ponto
-struct StrPonto{
-    double x; double y;
-    int id = 0;
-};
+
