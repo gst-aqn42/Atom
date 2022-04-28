@@ -36,13 +36,23 @@ double Nave::calcular_distancia(Nave nave){
 }
 
 int Nave::determinar_indice_nave_mais_proxima(Nave naves[], int n){
-    double aux = this->calcular_distancia(naves[0]); //variavel auxiliar que recebe o indice da nave mais próxima
-    for (int i = 1; i < n; i++){
-        if(this->calcular_distancia(naves[i]) < aux){
-            aux = this->calcular_distancia(naves[i]);
-        }
+    double aux = 0; int count = 0;
+    for (int i = 0; i < n; i++){
+        if (aux == 0){
+            aux = calcular_distancia(naves[i]);
+            count = i;
+        }else{
+            if (aux > calcular_distancia(naves[i])){
+                aux = calcular_distancia(naves[i]);
+                count = i;
+            }
+        }    
+    }
+    return count;
+}
 
-    }   
+void Nave::atacar(Nave naves[], int n){
+    //
 }
 
 //Métodos Adicionais
