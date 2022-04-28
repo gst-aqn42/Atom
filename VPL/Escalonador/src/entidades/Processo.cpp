@@ -8,5 +8,14 @@ Processo::Processo(int id, std::string nome, int prioridade){
 }
 
 void Processo::imprimir_dados(){
-    std::cout << _id << _nome << _prioridade << std::endl;
+    std::cout << _id << " " << _nome << " " <<_prioridade << std::endl;
+}
+
+//Métodos Adicionas
+int Processo::get_prioridade(){
+    return _prioridade;
+}
+
+int Processo::get_id(){
+    return _id;
 }

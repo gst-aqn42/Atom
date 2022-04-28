@@ -5,13 +5,15 @@
 
 class Processo{
 private:
-    int _id; std::string _nome; int _prioridade;
+    int _id = 0; std::string _nome; int _prioridade = 0;
     
 public:
-    Processo* _prox = nullptr; Processo* _ante = nullptr;
-
     Processo(int id, std::string nome, int prioridade);
     void imprimir_dados();
+    
+    // Métodos Adicionais
+    int get_prioridade();
+    int get_id();
 };
 
 #endif
