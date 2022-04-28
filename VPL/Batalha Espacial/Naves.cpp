@@ -1,5 +1,6 @@
 #include "Naves.hpp"
 #include <cmath>
+#include <iostream>
 
 Nave::Nave(Ponto2D posicao, double forca){ //caso o usiário coloque foca = 0
     _posicao = posicao;
@@ -52,7 +53,19 @@ int Nave::determinar_indice_nave_mais_proxima(Nave naves[], int n){
 }
 
 void Nave::atacar(Nave naves[], int n){
-    //
+    int proxNave = determinar_indice_nave_mais_proxima(naves, n);
+    double dano = (this->_forca*100)/calcular_distancia(naves[proxNave]);
+    if (dano > 30){
+        dano = 30;
+    }
+    naves[proxNave]._energia = naves[proxNave]._energia - dano;
+    if (naves[proxNave]._energia <= 50){
+        std::cout << "Energia Baixa!" << std::endl;
+    }
+}
+
+void Nave::imprimir_status(){
+    std::cout << get_posicao_x() << " " << get_posicao_y() << " " << _energia << std::endl;
 }
 
 //Métodos Adicionais
