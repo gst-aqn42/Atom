@@ -1,4 +1,5 @@
 #include "Naves.hpp"
+#include <cmath>
 
 Nave::Nave(Ponto2D posicao, double forca){ //caso o usiário coloque foca = 0
     _posicao = posicao;
@@ -27,20 +28,22 @@ void Nave::mover(double dx, double dy){
     _posicao.set_y(dy);
 }
 
-double calcular_distancia(Nave nave){
+double Nave::calcular_distancia(Nave nave){
     double dx = (nave.get_posicao_x() - this->get_posicao_x()); 
     double dy = (nave.get_posicao_y() - this->get_posicao_y());
+
+    return sqrt(pow(dx, 2) + pow(dy, 2));
 }
 
 int Nave::determinar_indice_nave_mais_proxima(Nave naves[], int n){
-    int aux; //variavel auxiliar que recebe o indice da nave mais próxima
-    for (int i = 0; i < n; i++){
-        this->
-    }
-    
+    double aux = this->calcular_distancia(naves[0]); //variavel auxiliar que recebe o indice da nave mais próxima
+    for (int i = 1; i < n; i++){
+        if(this->calcular_distancia(naves[i]) < aux){
+            aux = this->calcular_distancia(naves[i]);
+        }
+
+    }   
 }
-
-
 
 //Métodos Adicionais
 double Nave::get_posicao_x(){
