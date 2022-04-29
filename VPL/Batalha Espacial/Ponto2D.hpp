@@ -16,6 +16,4 @@ class Ponto2D{
       void set_x(double dx);
       void set_y(double dy);
 };
-
-
 #endif

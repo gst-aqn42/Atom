@@ -12,7 +12,7 @@ Ponto2D::Ponto2D(){
 }
 
 double Ponto2D::calcular_distancia(Ponto2D ponto){
-    return sqrt(pow(ponto.get_x(),2) + pow(ponto.get_y(),2));
+    return sqrt(pow(ponto.get_x(), 2) + pow(ponto.get_y(), 2));
 }
 
 //Métodos Adicionais
@@ -25,9 +25,9 @@ double Ponto2D::get_y(){
 }
 
 void Ponto2D::set_x(double dx){
-    _x = _x + dx;
+    _x += dx;
 }
 
 void Ponto2D::set_y(double dy){
-    _y = _y + dy;
+    _y += dy;
 }

@@ -5,7 +5,7 @@
 
 class Nave{
     private:
-        Ponto2D _posicao; double _forca; double _energia;
+        Ponto2D _posicao; double _forca = 0; double _energia;
     public:
         Nave(Ponto2D posicao, double forca);
         Nave(Ponto2D posicao);
