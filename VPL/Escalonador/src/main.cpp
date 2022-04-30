@@ -1,22 +1,33 @@
 #include <iostream>
-
-#include "Pessoa.hpp"
-#include "Funcionario.hpp"
-#include "Professor.hpp"
-
-using namespace std;
+#include "Processo.hpp"
+#include "ListaProcessos.hpp"
+//#include "avaliacao_basica_escalonador.hpp"
 
 int main() {
-    std::cout << "PDS2 - Makefile" << std::endl;
-
-    Pessoa pessoa("Joao",72);
-    cout << "Pessoa: " << pessoa << endl;
-
-    Funcionario funcionario(1000,"Ricardo",72);
-    cout << "Funcionario: " << funcionario << endl;
-
-    Professor professor("Computacao",20000,"Leonardo",25);
-    cout << "Professor: " << professor << endl;
-
-    return 0;
+  char entrada;
+  std::cin >> entrada;
+  switch (entrada) {
+    case 'a':
+        int id; int prioridade; std::string nome;
+        std::cin >> id, nome, prioridade;
+        adicionar_processo(Processo(id, nome, prioridade));
+        break;
+    case 'm':
+      remover_processo_maior_prioridade();
+      break;
+    case 'r':
+      int id;
+      std::cin >> id;
+      remover_processo_por_id(id);
+      break;
+    case 'p':
+      imprimir_lista();
+      break;
+    /*case 'b':
+      avaliacao_basica();
+      break;
+    default:
+      std::cout << "Erro: teste invalido: " << tipo_teste << std::endl;*/
+  }
+  return 0;
 }

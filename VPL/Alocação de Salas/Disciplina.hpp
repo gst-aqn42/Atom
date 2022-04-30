@@ -7,7 +7,7 @@
 
 class Disciplina{
 private:
-    std::string _codigo; std::string _nome; std::map<std::string, Alocacao> alocacao;
+    std::string _codigo; std::string _nome; std::map<std::string, Alocacao> map_alocacao;
     
 public:
     Disciplina(std::string codigo, std::string nome);
