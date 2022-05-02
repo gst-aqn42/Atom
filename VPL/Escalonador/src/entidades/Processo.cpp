@@ -1,6 +1,9 @@
 #include "Processo.hpp"
 #include <iostream>
 
+
+Processo::Processo(){
+}
 Processo::Processo(int id, std::string nome, int prioridade){
     _id = id;
     _nome = nome;

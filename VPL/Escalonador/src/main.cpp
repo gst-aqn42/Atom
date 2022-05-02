@@ -1,33 +1,39 @@
 #include <iostream>
 #include "Processo.hpp"
 #include "ListaProcessos.hpp"
-//#include "avaliacao_basica_escalonador.hpp"
+#include "avaliacao_basica_escalonador.hpp"
 
-int main() {
+int main(){
   char entrada;
+  ListaProcessos listProc;
   std::cin >> entrada;
-  switch (entrada) {
-    case 'a':
-        int id; int prioridade; std::string nome;
-        std::cin >> id, nome, prioridade;
-        adicionar_processo(Processo(id, nome, prioridade));
-        break;
-    case 'm':
-      remover_processo_maior_prioridade();
+  switch (entrada){
+    case 'a':{
+      int id; int prioridade; std::string nome;
+      std::cin >> id; 
+      std::cin >> nome
+      std::cin >> prioridade;
+      listProc.adicionar_processo(Processo(id, nome, prioridade));
       break;
-    case 'r':
+    }
+    case 'm':{
+      listProc.remover_processo_maior_prioridade();
+      break;
+    }
+    case 'r':{
       int id;
       std::cin >> id;
-      remover_processo_por_id(id);
+      listProc.remover_processo_por_id(id);
       break;
-    case 'p':
-      imprimir_lista();
+    }
+    case 'p':{
+      listProc.imprimir_lista();
       break;
-    /*case 'b':
+    }
+    case 'b':{
       avaliacao_basica();
       break;
-    default:
-      std::cout << "Erro: teste invalido: " << tipo_teste << std::endl;*/
+    }
   }
   return 0;
 }

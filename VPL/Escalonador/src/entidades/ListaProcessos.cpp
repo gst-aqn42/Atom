@@ -1,7 +1,11 @@
 #include "ListaProcessos.hpp"
 
+ListaProcessos::ListaProcessos(){
+}
+
 void ListaProcessos::adicionar_processo(Processo proc){
     std::vector<Processo>::iterator it = Lista.begin();
+
     while(it->get_prioridade() >= proc.get_prioridade()){
         it++;
     }
