@@ -8,7 +8,7 @@ private:
     int _id = 0; std::string _nome; int _prioridade = 0;
     
 public:
-    Processo();
+
     Processo(int id, std::string nome, int prioridade);
     void imprimir_dados();
     
