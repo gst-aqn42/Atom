@@ -6,9 +6,7 @@ ListaProcessos::ListaProcessos(){
 
 void ListaProcessos::adicionar_processo(Processo proc){
     std::vector<Processo>::iterator it = Lista.begin();
-
-    //Definir um operator para a função abaixo
-    while((it)->get_prioridade() >= proc.get_prioridade()){
+    while(it->get_prioridade() >= proc.get_prioridade()){
         it++;
     }
     Lista.insert(it, proc);
