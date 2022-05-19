@@ -6,14 +6,14 @@
         {
             "label": "Compilar",
             "type": "shell",
-            "command": "g++ Processo.cpp ListaProcessos.cpp  main.cpp -o lista_processos -g",
+            "command": "g++ Alocacao.cpp main.cpp -o modular_alocacao -g",
             "problemMatcher": [],
             "group": "test"
         },
         {
             "label": "Executar",
             "type": "shell",
-            "command": "./lista_processos",
+            "command": "./modular_alocacao",
             "problemMatcher": [],
             "group": {
                 "kind": "test",

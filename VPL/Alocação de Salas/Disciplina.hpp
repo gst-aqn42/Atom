@@ -16,7 +16,7 @@ public:
     void imprimir_alocacao();
 
     //Métodos Auxiliares
+    int contar_alocacoes();
 
 };
-
 #endif

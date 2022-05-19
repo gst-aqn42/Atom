@@ -1,6 +1,5 @@
 #ifndef ALOCACAO_HPP    
 #define ALOCACAO_HPP 
-
 #include <string>
 
 class Alocacao{
@@ -11,7 +10,4 @@ public:
     Alocacao();
     void imprimir_dados();
 };
-
-
-
 #endif
