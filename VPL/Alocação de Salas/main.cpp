@@ -9,7 +9,7 @@
     char entrada;
     while(std::cin >> entrada){
         switch (entrada){
-            case 'a':{
+            case 'a':{ //debugado
                 std::string codigo; std::string nome; std::string dia;
                 std::string horario; std::string sala;
                 std::cin >> codigo; std::cin >> nome; std::cin >> dia;
@@ -19,12 +19,11 @@
                 
                 break;
             }
-            case 'm':{
+            case 'm':{ //Reescrever
                 quadro.recuperar_disciplinas_mais_ofertadas();
-
                 break;
             }
-            case 'r':{
+            case 'r':{ //debugado
                 std::string codigo; std::string horario;
                 std::cin >> codigo;
                 std::cin >> horario;
@@ -32,9 +31,8 @@
                 
                 break;
             }
-            case 'p':{
+            case 'p':{ //debugado
                 quadro.imprimir_alocacao_completa();
-
                 break;
             }
             case 'b':{

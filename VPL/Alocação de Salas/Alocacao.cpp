@@ -12,4 +12,7 @@ void Alocacao::imprimir_dados(){
     std::cout << _dia << " " << _horario << " " << _sala <<std::endl;
 }
 
+std::string Alocacao::get_horario(){
+    return _horario;
+}
 

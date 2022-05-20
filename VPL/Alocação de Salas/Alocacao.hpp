@@ -9,5 +9,8 @@ public:
     Alocacao(std::string dia, std::string horario, std::string sala);
     Alocacao();
     void imprimir_dados();
+
+    //metodos adicionais
+    std::string get_horario();
 };
 #endif

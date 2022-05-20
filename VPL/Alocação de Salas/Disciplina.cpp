@@ -13,11 +13,9 @@ void Disciplina::inserir_alocacao(std::string dia, std::string horario, std::str
     map_alocacao.insert(inserir);
 }
 
-void Disciplina::remover_alocacao(std::string hor){
-    std::string horario;
-    std::cin >> horario;
+void Disciplina::remover_alocacao(std::string horario){
     std::map<std::string, Alocacao>::iterator it = map_alocacao.find(horario); //Apaga do map a alocacao de chave-valor horário
-    if (it == map_alocacao.end() && it->first != horario){
+    if (it == map_alocacao.end() && it->second.get_horario() != horario){
         std::cout << "Horário não encontrado para a amatéria informada." << std::endl;
     }else{
         map_alocacao.erase(horario);
@@ -29,6 +27,7 @@ void Disciplina::imprimir_alocacao(){
     while (it != map_alocacao.end()){
         std::cout << this->_codigo << " " << this->_nome << " ";
         it->second.imprimir_dados(); 
+        it++;
     }
     
 }
