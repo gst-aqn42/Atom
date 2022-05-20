@@ -6,14 +6,14 @@
         {
             "label": "Compilar",
             "type": "shell",
-            "command": "g++ Alocacao.cpp main.cpp -o modular_alocacao -g",
+            "command": "g++ Alocacao.cpp Disciplina.cpp QuadroAlocacao.cpp main.cpp -o debug_quadro_alocacao -g",
             "problemMatcher": [],
             "group": "test"
         },
         {
             "label": "Executar",
             "type": "shell",
-            "command": "./modular_alocacao",
+            "command": "./debug_quadro_alocacao",
             "problemMatcher": [],
             "group": {
                 "kind": "test",

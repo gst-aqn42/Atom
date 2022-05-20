@@ -4,6 +4,7 @@
 #include <string>
 #include "Alocacao.hpp"
 #include <map>
+#include <vector>
 
 class Disciplina{
 private:
@@ -17,6 +18,5 @@ public:
 
     //Métodos Auxiliares
     int contar_alocacoes();
-
 };
 #endif
