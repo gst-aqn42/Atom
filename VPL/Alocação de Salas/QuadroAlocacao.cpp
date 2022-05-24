@@ -23,6 +23,27 @@ void QuadroAlocacao::remover_alocacao_disciplina(std::string codigo, std::string
 
 //imprime a materia com mais salas alocadas
 std::vector<Disciplina> QuadroAlocacao::recuperar_disciplinas_mais_ofertadas(){ 
+    std::vector<Disciplina> vector_return;
+
+    std::map<std::string, Disciplina>::iterator it = map_quadro_alocacao.begin();
+    std::map<std::string,Disciplina>::iterator maior_alocacao = map_quadro_alocacao.begin();
+    while (it != map_quadro_alocacao.end()){
+        if ((*it).second.contar_alocacoes() > (*it++).second.contar_alocacoes()){
+            if ((*it).second.contar_alocacoes() > (*maior_alocacao).second.contar_alocacoes()){
+                maior_alocacao = it;
+            }else{
+                maior_alocacao = maior_alocacao;
+            }
+        }
+        it++;
+    }
+
+    
+    for (int i = 0; i < (*maior_alocacao).second.contar_alocacoes(); i++){
+        std::pair<std::string, Disciplina> inserir();
+    }
+    
+    (*maior_alocacao).second.imprimir_alocacao();
     
 }
 
