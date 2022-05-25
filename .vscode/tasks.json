@@ -6,7 +6,7 @@
         {
             "label": "Compilar",
             "type": "shell",
-            "command": "g++ Alocacao.cpp Disciplina.cpp QuadroAlocacao.cpp main.cpp -o debug_quadro_alocacao -g",
+            "command": "g++ Processo.cpp ListaProcessos.cpp main.cpp -o debug_ListaProc -g",
             "problemMatcher": [],
             "group": "test"
         },

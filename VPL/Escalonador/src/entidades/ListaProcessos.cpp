@@ -6,10 +6,15 @@ ListaProcessos::ListaProcessos(){
 
 void ListaProcessos::adicionar_processo(Processo proc){
     std::vector<Processo>::iterator it = Lista.begin();
-    while(it->get_prioridade() >= proc.get_prioridade()){
-        it++;
+    
+    if (it != Lista.end()){
+        while((*it).get_prioridade() >= proc.get_prioridade()){
+            it++;
+        }
+        Lista.insert(it, proc);
+    }else{
+        Lista.insert(it, proc);
     }
-    Lista.insert(it, proc);
 }
 
 Processo ListaProcessos::remover_processo_maior_prioridade(){
@@ -20,7 +25,7 @@ Processo ListaProcessos::remover_processo_maior_prioridade(){
     return prc;
 }
 Processo ListaProcessos::remover_processo_menor_prioridade(){
-    Processo prc = *Lista.end();
+    Processo prc = Lista.at((Lista.size() - 1));
     Lista.pop_back();
 
     return prc;

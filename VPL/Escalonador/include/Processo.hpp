@@ -4,7 +4,7 @@
 #include <string>
 
 class Processo{
-
+private:
     int _id = 0; std::string _nome; int _prioridade = 0;
     
 public:

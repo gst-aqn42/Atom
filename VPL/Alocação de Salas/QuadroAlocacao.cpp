@@ -39,11 +39,10 @@ std::vector<Disciplina> QuadroAlocacao::recuperar_disciplinas_mais_ofertadas(){
     }
 
     
-    for (int i = 0; i < (*maior_alocacao).second.contar_alocacoes(); i++){
-        std::pair<std::string, Disciplina> inserir();
-    }
-    
+    vector_return = (*maior_alocacao).second;
     (*maior_alocacao).second.imprimir_alocacao();
+
+    return vector_return;
     
 }
 
