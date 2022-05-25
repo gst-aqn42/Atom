@@ -1,12 +1,13 @@
 #include <iostream>
 
-#include "../include/tabuleiro.h"
+#include "tabuleiro.hpp"
 
 
 Tabuleiro::Tabuleiro() {
   int tamanho = 8;
   int inicio = 3;
 
+  //Cria o tabuleiro matríz vazio.
   for (int i = 0; i < tamanho; i++) {
     _casas.push_back(vector<Peca *>());
     for (int j = 0; j < tamanho; j++) {
@@ -14,6 +15,7 @@ Tabuleiro::Tabuleiro() {
     }
   }
 
+  //Preenche as posições [1]; Inicio = 3 linhas de altura, Tamanho = 8 linhas de largura.
   for (int i = 0; i < inicio; i++) {
     for (int j = 0; j < tamanho - 1; j+=2) {
       if (i % 2 == 0)
@@ -23,6 +25,8 @@ Tabuleiro::Tabuleiro() {
     }
   }
 
+  //Preenche as posições [0]; 'i' irá percorrer do fim da matríz até o início da terceira linha (de trás para frente)
+  //adicionando os elementos.
   for (int i = tamanho - 1; i >= tamanho - inicio; i--) {
     for (int j = 0; j < tamanho - 1; j+=2) {
       if (i % 2 == 0)
@@ -32,6 +36,7 @@ Tabuleiro::Tabuleiro() {
     }
   }
 
+  //Por padrão: [1] inicia o jogo
   _da_vez = Cor::VERMELHA;
 }
 
@@ -56,6 +61,7 @@ bool Tabuleiro::movimenta(int linha, int col, bool diag_esq) {
    * Seu código AQUI!! Garanta que não existem leaks.
    */
 
+  //Após o movimento passa a vez
   if (_da_vez == Cor::VERMELHA) {
     _da_vez = Cor::PRETA;
   } else {
