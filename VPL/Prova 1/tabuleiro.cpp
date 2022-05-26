@@ -36,7 +36,7 @@ Tabuleiro::Tabuleiro() {
     }
   }
 
-  //Por padrão: [1] inicia o jogo
+  //Por definição: [1] inicia o jogo
   _da_vez = Cor::VERMELHA;
 }
 
@@ -50,17 +50,94 @@ Tabuleiro::~Tabuleiro() {
   }
 }
 
+
+//Tomando o tabuleirocomo referencial de movimentação
 bool Tabuleiro::movimenta(int linha, int col, bool diag_esq) {
-  int tamanho = _casas.size();
+  int tamanho = _casas.size(); //tamanho = 8 (limite do tabuleiro)
+  
+  //validação para movimentar a peça (se ela está no tabuleiro, se existe e se é da cor da vez)
   if (linha < 0 || col < 0) return false;
   if (linha >= tamanho || col >= tamanho) return false;
   if (_casas[linha][col] == nullptr) return false;
   if (_casas[linha][col]->get_cor() != _da_vez) return false;
 
-  /*
-   * Seu código AQUI!! Garanta que não existem leaks.
-   */
+  //Movimento vermelha
+  if (_casas[linha][col]->get_cor() == Cor::VERMELHA){
 
+    int nova_linha = linha + 1;
+    int nova_col = 0;
+    if (diag_esq == true){
+      nova_col = col - 1;
+    }else{
+      nova_col = col + 1;
+    }
+    
+    //validação do movimento e comer peça adversária
+    //(se continua no tabuleiro após o movimento e se o novo ponto está vazio ou possui peça adversária)
+    if (nova_linha < 0 || nova_col < 0) return false;
+    if (nova_linha >= tamanho || nova_col >= tamanho) return false;
+    
+    if (_casas[nova_linha][nova_col] != nullptr){
+      if (_casas[nova_linha][nova_col]->get_cor() == Cor::VERMELHA){
+        return false;
+      }else{
+
+      }
+    }else{
+      delete _casas[linha][col];
+      _casas[linha][col] = nullptr;
+      _casas[nova_linha][nova_col] = new Peca(Cor::VERMELHA);
+    }
+  
+  }else{
+    int nova_linha = linha - 1;
+    int nova_col = 0;
+    if (diag_esq == true){
+      nova_col = col - 1;
+    }else{
+      nova_col = col + 1;
+    }
+
+    //validação do movimento para op novo ponto
+    //(se continua no tabuleiro após o movimento e se o novo ponto está vazio ou possui peça adversária)
+    if (nova_linha < 0 || nova_col < 0) return false;
+    if (nova_linha >= tamanho || nova_col >= tamanho) return false;
+
+    if (_casas[nova_linha][nova_col] != nullptr){
+      if (_casas[nova_linha][nova_col]->get_cor() == Cor::PRETA){
+        return false;
+      }else{
+        int linha_jump = nova_linha - 1;
+        int col_jump = 0; // col_pula é um som cacofônico
+        if (diag_esq == true){
+          col_jump = nova_col - 1;
+        }else{
+          col_jump = nova_col + 1;
+        }
+
+        //validação do movimento para comer a peça adversária
+        //(se continua no tabuleiro após o movimento e se o novo ponto está vazio ou possui peça adversária)
+        if (linha_jump < 0 || col_jump < 0) return false;
+        if (linha_jump >= tamanho || col_jump >= tamanho) return false;
+
+        if (_casas[linha_jump][col_jump] != nullptr){
+          return false;
+        }else{
+          delete _casas[nova_linha][nova_col];
+          _casas[nova_linha][nova_col] = nullptr;
+          delete _casas[linha][col];
+          _casas[linha][col] = nullptr;
+
+          _casas[linha_jump][col_jump] = new Peca(Cor::PRETA);
+        }
+      }
+    }else{
+      delete _casas[linha][col];
+      _casas[linha][col] = nullptr;
+      _casas[nova_linha][nova_col] = new Peca(Cor::PRETA);
+    }
+  }
+  
   //Após o movimento passa a vez
   if (_da_vez == Cor::VERMELHA) {
     _da_vez = Cor::PRETA;

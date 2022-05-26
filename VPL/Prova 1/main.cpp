@@ -10,7 +10,8 @@ int main() {
   
   bool esq = true;
   bool dir = false;
-  
+
+  //Erro: não existe espaço para o movimento (Limite do tabuleiro) -> referencial do tabuleiro
   bool ok = tab->movimenta(0, 0, esq);
   if (!ok) cout << "Erro no movimento!";
   cout << endl;

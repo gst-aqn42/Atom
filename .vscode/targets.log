@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Wed May 25 16:06:46 2022
+# Make data base, printed on Thu May 26 08:29:44 2022
 
 # Variables
 
@@ -29,13 +29,13 @@ VSCODE_LOG_NATIVE = false
 # automatic
 @F = $(notdir $@)
 # makefile
-CURDIR := /home/gus/Atom
+CURDIR := /home/ozymandias/C++/PDSII/Atom
 # makefile
 SHELL = /bin/sh
 # environment
-VSCODE_NLS_CONFIG = {"locale":"pt-br","availableLanguages":{"*":"pt-br"},"_languagePackId":"74ce6549a467d1dfaba55fb5394742c9.pt-br","_translationsConfigFile":"/home/gus/.vscode-server/data/clp/74ce6549a467d1dfaba55fb5394742c9.pt-br/tcf.json","_cacheRoot":"/home/gus/.vscode-server/data/clp/74ce6549a467d1dfaba55fb5394742c9.pt-br","_resolvedLanguagePackCoreLocation":"/home/gus/.vscode-server/data/clp/74ce6549a467d1dfaba55fb5394742c9.pt-br/c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5","_corruptedFile":"/home/gus/.vscode-server/data/clp/74ce6549a467d1dfaba55fb5394742c9.pt-br/corrupted.info","_languagePackSupport":true}
+VSCODE_NLS_CONFIG = {"locale":"pt-br","availableLanguages":{"*":"pt-br"},"_languagePackId":"74ce6549a467d1dfaba55fb5394742c9.pt-br","_translationsConfigFile":"/home/ozymandias/.vscode-server/data/clp/74ce6549a467d1dfaba55fb5394742c9.pt-br/tcf.json","_cacheRoot":"/home/ozymandias/.vscode-server/data/clp/74ce6549a467d1dfaba55fb5394742c9.pt-br","_resolvedLanguagePackCoreLocation":"/home/ozymandias/.vscode-server/data/clp/74ce6549a467d1dfaba55fb5394742c9.pt-br/c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5","_corruptedFile":"/home/ozymandias/.vscode-server/data/clp/74ce6549a467d1dfaba55fb5394742c9.pt-br/corrupted.info","_languagePackSupport":true}
 # environment
-_ = /home/gus/.vscode-server/bin/c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5/node
+_ = /home/ozymandias/.vscode-server/bin/c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5/node
 # makefile
 MAKEFILE_LIST := 
 # 'override' directive
@@ -47,15 +47,15 @@ VSCODE_VERBOSE_LOGGING = true
 # environment
 LESSOPEN = | /usr/bin/lesspipe %s
 # environment
-VSCODE_CWD = /mnt/c/Users/ICUFMG/AppData/Local/Programs/Microsoft VS Code
+VSCODE_CWD = /mnt/c/Users/gusaq/AppData/Local/Programs/Microsoft VS Code
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
 # environment
-PATH = /home/gus/.vscode-server/bin/c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files/Git/cmd:/mnt/c/Users/ICUFMG/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/ICUFMG/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin
+PATH = /home/ozymandias/.vscode-server/bin/c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/Microsoft/jdk-11.0.12.7-hotspot/bin:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/Microsoft SQL Server/150/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files (x86)/Microsoft SQL Server/150/DTS/Binn/:/mnt/c/Program Files/Azure Data Studio/bin:/mnt/c/Program Files/OpenSSL-Win64/bin:/mnt/c/Program Files (x86)/Ghdl/Bin:/mnt/c/Program Files/MySQL/MySQL Shell 8.0/bin/:/mnt/c/Users/gusaq/AppData/Local/Microsoft/WindowsApps:/mnt/c/xampp/php:/mnt/c/Users/gusaq/composer:/mnt/c/Users/gusaq/AppData/Roaming/Composer/vendor/bin:/mnt/c/Users/gusaq/.dotnet/tools:/mnt/c/Program Files/Azure Data Studio/bin:/mnt/c/Users/gusaq/AppData/Local/GitHubDesktop/bin:/mnt/c/Users/gusaq/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin
 # environment
 VSCODE_LOG_STACK = false
 # environment
-VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-817b0a57-ffc8-4d37-835f-87a8847898a9.sock
+VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-833de1d4-0f4b-4216-9521-5d2eef7f12a0.sock
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -65,19 +65,19 @@ LS_COLORS = rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:
 # environment
 VSCODE_PIPE_LOGGING = true
 # environment
-PWD = /home/gus/Atom
+PWD = /home/ozymandias/C++/PDSII/Atom
 # default
 .LOADED := 
 # environment
-WSL_INTEROP = /run/WSL/11_interop
+WSL_INTEROP = /run/WSL/15_interop
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
-HOME = /home/gus
+HOME = /home/ozymandias
 # environment
 LESSCLOSE = /usr/bin/lesspipe %s %s
 # environment
-LOGNAME = gus
+LOGNAME = ozymandias
 # environment
 APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
 # environment
@@ -95,15 +95,15 @@ SHLVL = 0
 # default
 MAKE_VERSION := 4.2.1
 # environment
-USER = gus
+USER = ozymandias
 # makefile
 .DEFAULT_GOAL := 
 # environment
-NAME = COFM01
+NAME = DESKTOP-60NKS37
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # environment
-VSCODE_WSL_EXT_LOCATION = /mnt/c/Users/ICUFMG/.vscode/extensions/ms-vscode-remote.remote-wsl-0.66.3
+VSCODE_WSL_EXT_LOCATION = /mnt/c/Users/gusaq/.vscode/extensions/ms-vscode-remote.remote-wsl-0.66.3
 # default
 MAKE_COMMAND := make
 # default
@@ -157,7 +157,7 @@ MOTD_SHOWN = update-motd
 
 # Directories
 
-# . (device 2064, inode 49324): 7 files, no impossibilities.
+# . (device 2064, inode 48158): 7 files, no impossibilities.
 
 # 7 files, no impossibilities in 1 directories.
 
@@ -215,6 +215,6 @@ GNUmakefile:
 # strcache performance: lookups = 18 / hit rate = 16%
 # hash-table stats:
 # Load=15/8192=0%, Rehash=0, Collisions=1/18=6%
-# Finished Make data base on Wed May 25 16:06:46 2022
+# Finished Make data base on Thu May 26 08:29:44 2022
 
  

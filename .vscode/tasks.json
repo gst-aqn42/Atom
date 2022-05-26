@@ -6,14 +6,14 @@
         {
             "label": "Compilar",
             "type": "shell",
-            "command": "g++ Processo.cpp ListaProcessos.cpp main.cpp -o debug_ListaProc -g",
+            "command": "g++ peca.cpp tabuleiro.cpp main.cpp -o debug_prova -g",
             "problemMatcher": [],
             "group": "test"
         },
         {
             "label": "Executar",
             "type": "shell",
-            "command": "./debug_quadro_alocacao",
+            "command": "./debug_prova",
             "problemMatcher": [],
             "group": {
                 "kind": "test",
