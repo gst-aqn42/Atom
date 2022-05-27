@@ -81,11 +81,37 @@ bool Tabuleiro::movimenta(int linha, int col, bool diag_esq) {
       if (_casas[nova_linha][nova_col]->get_cor() == Cor::VERMELHA){
         return false;
       }else{
+        int linha_jump = nova_linha + 1;
+        int col_jump = 0;
+        if(diag_esq == true){
+          col_jump = nova_col - 1;
+        }else{
+          col_jump = nova_col + 1;
+        }
 
+        //validação do movimento para comer a peça adversária
+        //(se continua no tabuleiro após o movimento e se o novo ponto está vazio ou possui peça adversária)
+        if (linha_jump < 0 || col_jump < 0) return false;
+        if (linha_jump >= tamanho || col_jump >= tamanho) return false;
+
+        if (_casas[linha_jump][col_jump] != nullptr){
+          return false;
+        }else{
+          Peca *peca_ptr = _casas[nova_linha][nova_col];
+          delete peca_ptr;
+          _casas[nova_linha][nova_col] = nullptr;
+          Peca *aux_peca_ptr = _casas[linha][col];
+          delete aux_peca_ptr;
+          _casas[linha][col] = nullptr;
+
+          _casas[linha_jump][col_jump] = new Peca(Cor::VERMELHA);
+        }
       }
     }else{
-      delete _casas[linha][col];
+      Peca *peca_ptr =   _casas[linha][col];
+      delete peca_ptr;
       _casas[linha][col] = nullptr;
+
       _casas[nova_linha][nova_col] = new Peca(Cor::VERMELHA);
     }
   
@@ -123,16 +149,19 @@ bool Tabuleiro::movimenta(int linha, int col, bool diag_esq) {
         if (_casas[linha_jump][col_jump] != nullptr){
           return false;
         }else{
-          delete _casas[nova_linha][nova_col];
+          Peca *peca_ptr = _casas[nova_linha][nova_col];
+          delete peca_ptr;
           _casas[nova_linha][nova_col] = nullptr;
-          delete _casas[linha][col];
+          Peca *aux_peca_prt = _casas[linha][col];
+          delete aux_peca_prt;
           _casas[linha][col] = nullptr;
 
           _casas[linha_jump][col_jump] = new Peca(Cor::PRETA);
         }
       }
     }else{
-      delete _casas[linha][col];
+      Peca *peca_ptr = _casas[linha][col];
+      delete peca_ptr;
       _casas[linha][col] = nullptr;
       _casas[nova_linha][nova_col] = new Peca(Cor::PRETA);
     }
@@ -158,4 +187,6 @@ void Tabuleiro::imprime() {
     }
     cout << endl;
   }
+  cout << endl;
+  cout << "Daz vez: " << Tabuleiro::_da_vez << endl;
 }
