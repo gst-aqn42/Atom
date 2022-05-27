@@ -6,14 +6,14 @@
         {
             "label": "Compilar",
             "type": "shell",
-            "command": "g++ peca.cpp tabuleiro.cpp main.cpp -o debug_prova -g",
+            "command": "g++ fila_de_prioridade.cpp main.cpp -o debug_fila -g",
             "problemMatcher": [],
             "group": "test"
         },
         {
             "label": "Executar",
             "type": "shell",
-            "command": "./debug_prova",
+            "command": "./debug_fila",
             "problemMatcher": [],
             "group": {
                 "kind": "test",

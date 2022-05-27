@@ -8,7 +8,7 @@
             "name": "(gdb) Iniciar",
             "type": "cppdbg",
             "request": "launch",
-            "program": "/home/ozymandias/C++/PDSII/Atom/debug_prova",
+            "program": "/home/ozymandias/C++/PDSII/Atom/debug_fila",
             "args": [],
             "stopAtEntry": false,
             "cwd": "/home/ozymandias/C++/PDSII/Atom/",

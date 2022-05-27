@@ -53,5 +53,5 @@ class FilaDePrioridade {
 
   // Ponteiro para o primeiro da lista encadeada. 
   // Quando tamanho_ == 0, o valor deste ponteiro é nullptr.
-  No* primeiro_;  
+  No* primeiro_ = new No;  
 };

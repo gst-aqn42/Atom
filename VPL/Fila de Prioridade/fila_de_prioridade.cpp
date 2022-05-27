@@ -7,10 +7,11 @@ FilaDePrioridade::FilaDePrioridade(){
 }
 
 std::string FilaDePrioridade::primeiro() const{
-    if (tamanho_ >= 1){
+    if (tamanho_ != 0){
         return primeiro_->_nome;
     }else{
         std::cout <<  "A fila está vazia!" << std::endl;
+        return primeiro_->_nome;
     }
 }
 
@@ -27,13 +28,53 @@ bool FilaDePrioridade::vazia() const{
 }
 
 void FilaDePrioridade::RemoverPrimeiro(){
+    if (tamanho_ == 0){
+        std::cout << "Fila Vazia." << std::endl;
+        return;
+    }
+    
     No* aux = new No;
     aux = primeiro_;
     primeiro_ = primeiro_->prox;
     
     delete aux;
+    tamanho_--;
 }
 
 void FilaDePrioridade::Inserir(int p, string s){
+
+    No* novo = new No;
+    novo->_idade = p;
+    novo->_nome= s;
+    novo->prox = nullptr;
+
+    if (primeiro_ == nullptr){
+        primeiro_ = novo;
+        tamanho_ ++;
+        return;
+    }else{
+        No* aux = primeiro_;
+        while (aux->prox != nullptr){
+            aux = aux->prox;
+        }
+        aux->prox = novo;
+        tamanho_++;
+    }
+
     
+}
+
+ void FilaDePrioridade::Limpar(){
+    No *aux = new No;
+    aux = primeiro_;
+    if (aux == nullptr){
+        std::cout << "Fila Vazia." << std::endl;
+        return;
+    }else{
+        while (aux != nullptr){
+            primeiro_ = primeiro_->prox;
+            delete aux;
+            aux = primeiro_;
+        }
+    }   
 }
