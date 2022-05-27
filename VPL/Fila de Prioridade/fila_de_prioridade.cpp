@@ -42,30 +42,45 @@ void FilaDePrioridade::RemoverPrimeiro(){
 }
 
 void FilaDePrioridade::Inserir(int p, string s){
-
+    //instancia o novo objeto
     No* novo = new No;
     novo->_idade = p;
     novo->_nome= s;
     novo->prox = nullptr;
 
+    //Insere de forma ordenada
     if (primeiro_ == nullptr){
         primeiro_ = novo;
         tamanho_ ++;
         return;
     }else{
         No* aux = primeiro_;
-        while (aux->prox != nullptr){
+        while (aux != nullptr){
+            if (aux->_idade < novo->_idade){
+                No* aux_muda = new No;
+                *aux_muda = *aux;
+                aux_muda->prox = aux->prox;
+                *aux = *novo;
+                aux->prox = aux_muda;
+
+                tamanho_++;
+                return;
+            }
             aux = aux->prox;
         }
-        aux->prox = novo;
-        tamanho_++;
+        if (aux == nullptr){
+            aux = primeiro_;
+            while(aux->prox != nullptr){
+                aux = aux->prox;
+            }
+            aux->prox = novo;
+            tamanho_++;
+        }
     }
-
-    
 }
 
- void FilaDePrioridade::Limpar(){
-    No *aux = new No;
+void FilaDePrioridade::Limpar(){
+    No* aux = new No;
     aux = primeiro_;
     if (aux == nullptr){
         std::cout << "Fila Vazia." << std::endl;
