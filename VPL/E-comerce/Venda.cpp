@@ -63,7 +63,9 @@ void Venda::removeModelo(int cod){
 void Venda::imprimeEstoque() const{
    for ( auto it = m_celulares.begin(); it != m_celulares.end(); it++){
       if ((*it)._qtd >= 1){
-         std::cout << (*it)._fabricante << " " << (*it)._modelo << ", " << (*it)._armazenamento << "GB, " << (*it)._memoria << "GB, " << (*it)._peso << " gramas, " << (*it)._cor << ", " << (*it)._qtd << " restantes, " << "R$ " << (*it)._valor << std::endl;
+         std::cout << (*it)._fabricante << " " << (*it)._modelo << ", " << (*it)._armazenamento << "GB, " 
+         << (*it)._memoria << "GB, " << (*it)._peso << " gramas, " << (*it)._cor << ", " << (*it)._qtd << " restantes, " 
+         << "R$ " << (*it)._valor << std::endl;
       }
    }
 }
