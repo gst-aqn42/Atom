@@ -33,7 +33,7 @@ class Venda {
 
  private:
   /**
-   * @brief Lista de pedidos recebidos
+   * @brief Lista de pedidos recebidos v
    */
   std::list<Pedido*> m_pedidos;
 };
