@@ -8,7 +8,7 @@
  * de um produto do tipo Pizza.
  *
  */
-class Pizza : public Produto {
+class Pizza : protected Produto {
  public:
   /**
    * @brief Construtor padrao que inicializa todas as variaveis da classe.
@@ -33,8 +33,9 @@ class Pizza : public Produto {
   std::string descricao() const override;
 
  private:
-  // TODO: Declare aqui as variaveis da classe. Note que as variaveis quantidade
-  // (qtd) e valor ja sao herdadas de Produto
+  std::string _sabor;
+  int _pedacos;
+  bool _borda_recheada;
 };
 
 #endif
