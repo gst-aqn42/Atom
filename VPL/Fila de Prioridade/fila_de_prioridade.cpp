@@ -80,7 +80,11 @@ void FilaDePrioridade::Inserir(int p, string s){
 }
 
 void FilaDePrioridade::Limpar(){
+<<<<<<< HEAD
     No *aux = new No;
+=======
+    No* aux = new No;
+>>>>>>> f0df6715671b55a8babda12365d9366e13f9f287
     aux = primeiro_;
     if (aux == nullptr){
         std::cout << "Fila Vazia." << std::endl;
