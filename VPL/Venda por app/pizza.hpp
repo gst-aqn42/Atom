@@ -3,7 +3,7 @@
 
 #include "produto.hpp"
 
-class Pizza : protected Produto {
+class Pizza : public Produto {
  public:
 
   Pizza(const std::string& sabor,
