@@ -8,7 +8,6 @@ TEST_CASE("Classe Pizza"){
     Pizza* aux = new Pizza("Calabresa", 4, 1, 2, 60.9);
     _vect_pizza.push_back(aux);
     std::vector<Pizza*>::iterator it = _vect_pizza.begin();
-    CHECK((*aux).getQtd() == 2);
-    CHECK((*aux).getValor() == 60.90);
-    
+    CHECK((*it)->getQtd() == 2);
+    CHECK((*it)->getValor() == 60.90);
 }
