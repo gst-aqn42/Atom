@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Fri Jul  1 10:32:48 2022
+# Make data base, printed on Mon Jul  4 00:08:19 2022
 
 # Variables
 
@@ -55,7 +55,7 @@ PATH = /home/ozymandias/.vscode-server/bin/30d9c6cd9483b2cc586687151bcbcd635f373
 # environment
 VSCODE_LOG_STACK = false
 # environment
-VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-53f91e1d-2e36-4cfa-a97e-5c66d5c2c4bf.sock
+VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-5f9f8e55-168a-4aeb-9109-306a22402976.sock
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -69,7 +69,7 @@ PWD = /home/ozymandias/C++/PDSII/Atom
 # default
 .LOADED := 
 # environment
-WSL_INTEROP = /run/WSL/14_interop
+WSL_INTEROP = /run/WSL/11307_interop
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
@@ -215,6 +215,6 @@ GNUmakefile:
 # strcache performance: lookups = 20 / hit rate = 15%
 # hash-table stats:
 # Load=17/8192=0%, Rehash=0, Collisions=1/20=5%
-# Finished Make data base on Fri Jul  1 10:32:48 2022
+# Finished Make data base on Mon Jul  4 00:08:19 2022
 
  
