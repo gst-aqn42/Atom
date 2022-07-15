@@ -15,6 +15,14 @@ Japonesa::Japonesa(const std::string& combinado,
            }
 
 std::string Japonesa::descricao() const {
-  std::cout << m_qtd << "X " << "Comida japonesa - " << _combinado << ", " << _sushi << " sushis, " << _temaki << " temakis e " << _hots << "hots." << std::endl;
+  std::cout << m_qtd << "X " << "Comida japonesa - " << _combinado << ", " << _sushi << " sushis, " << _temaki << " temakis e " << _hots << " hots." << std::endl;
   return "";
+}
+
+float Japonesa::getValor() const{ 
+  return m_valor_unitario;
+}
+
+int Japonesa::getQtd() const{
+  return m_qtd;
 }

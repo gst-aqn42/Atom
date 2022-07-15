@@ -14,5 +14,13 @@ std::string Pizza::descricao() const{
   }else{
     std::cout << "sem borda recheada."<< std::endl;
   }
-  return ""; //O que é este retorno (?)
+  return ""; //O que é este retorno (?) R: Como era esperado: nada, apenas permite usar a string como valor de retorno sem um retorno real
+}
+
+float Pizza::getValor() const{ // Mas também se ela for chamada diretamente de produto retornará o valor, entretanto dará erro de compilação
+  return m_valor_unitario;
+}
+
+int Pizza::getQtd() const{ // O erro é devido a multiplas classes chamarem um mesmo retorno de função da classe pai
+  return m_qtd;
 }

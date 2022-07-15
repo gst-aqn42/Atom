@@ -20,3 +20,11 @@ Hamburguer::Hamburguer(const std::string& tipo,
   m_qtd = qtd;
   m_valor_unitario = valor_unitario;
 }
+
+float Hamburguer::getValor() const{
+  return m_valor_unitario;
+}
+
+int Hamburguer::getQtd() const{
+  return m_qtd;
+}

@@ -13,6 +13,8 @@ class Hamburguer : public Produto {
 
   
   std::string descricao() const override;
+  float getValor() const;
+  int getQtd() const;
 
  private:
   std::string _tipo;

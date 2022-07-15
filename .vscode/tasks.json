@@ -6,14 +6,14 @@
         {
             "label": "Compilar",
             "type": "shell",
-            "command": "g++ fila_de_prioridade.cpp main.cpp -o debug_fila -g",
+            "command": "g++ produto.cpp hamburguer.cpp japonesa.cpp pizza.cpp pedido.cpp venda.cpp util.cpp main.cpp -o debug_app -g",
             "problemMatcher": [],
             "group": "test"
         },
         {
             "label": "Executar",
             "type": "shell",
-            "command": "./debug_fila",
+            "command": "./debug_app",
             "problemMatcher": [],
             "group": {
                 "kind": "test",

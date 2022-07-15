@@ -5,11 +5,7 @@
 
 #include "pedido.hpp"
 
-/**
- * @brief Esta classe e responsavel pelo gerenciamento dos pedidos.
- * Ela armazenda a lista de pedidos que foram recebidos e imprime um relatorio
- * de vendas.
- */
+
 class Venda {
  public:
   /**
