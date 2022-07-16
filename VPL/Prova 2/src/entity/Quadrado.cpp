@@ -1,23 +1,27 @@
 #include "/home/ozymandias/C++/PDSII/Atom/VPL/Prova 2/include/Quadrado.hpp"
 
-Quadrado::Quadrado(std::string &cor, double aresta){
-  this->_cor = cor;
-  this->_arestaQuadrado = aresta;
-  this->_nome = "quadrado";
-  
-  set_area_quadrado(aresta);
-  set_perimetro_quadrado(aresta);
+Quadrado::Quadrado(std::string cor, int aresta){
+  _cor = cor;
+  _nome = "quadrado";
+  _area = (aresta*aresta);
+  _perimetro = (4*aresta);
 }
 
 Quadrado::~Quadrado(){
 }
 
-void Quadrado::set_area_quadrado(double aresta){
-  double area = (aresta*aresta);
-  set_area(area);
+std::string Quadrado::get_cor(){
+  return _cor;
 }
 
-void Quadrado::set_perimetro_quadrado(double aresta){
-  double perimetro = (4*aresta);
-  set_perimetro(perimetro);
+std::string Quadrado::get_nome(){
+  return _nome;
+}
+
+double Quadrado::get_area(){
+  return _area;
+}
+
+double Quadrado::get_perimetro(){
+  return _perimetro;
 }

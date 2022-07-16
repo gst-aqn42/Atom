@@ -3,14 +3,16 @@
 
 #include "Forma2D.hpp"
 
-class Circulo : Forma2D{
+class Circulo : public Forma2D{
 private:
-  double _raio;
+  int _raio;
 public:
-  Circulo(std::string &cor, double raio);
+  Circulo(std::string cor, int raio);
   ~Circulo();
-  void set_area_circulo(double raio);
-  void set_perimetro_circulo(double raio);
+  double get_area();
+  double get_perimetro();
+  std::string get_cor() override;
+  std::string get_nome() override;
 };
 
 #endif

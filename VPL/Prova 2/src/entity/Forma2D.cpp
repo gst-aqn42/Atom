@@ -12,19 +12,3 @@ double Forma2D::get_area(){
 double Forma2D::get_perimetro(){
   return _perimetro;
 }
-
-std::string Forma2D::get_cor(){
-  return _cor;
-}
-
-std::string Forma2D::get_nome(){
-  return _nome;
-}
-
-void Forma2D::set_area(double area){
-  _area = area;
-}
-
-void Forma2D::set_perimetro(double perimetro){
-  _perimetro = perimetro;
-}

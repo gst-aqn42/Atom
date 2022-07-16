@@ -7,11 +7,3 @@ Forma3D::Forma3D(){
 double Forma3D::get_volume(){
   return _volume;
 }
-
-std::string Forma3D::get_cor(){
-  return cor;
-}
-
-std::string Forma3D::get_nome(){
-  return nome;
-}

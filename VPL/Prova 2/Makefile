@@ -13,7 +13,7 @@ OBJECTS := $(patsubst $(SRCDIR)/%,$(OBJDIR)/%,$(SOURCES:.$(SRCEXT)=.o))
 TSTSOURCES := $(shell find $(TSTDIR) -type f -name *.$(SRCEXT))
 
 # -g debug, --coverage cobertura
-CFLAGS := -g --coverage -Wall -O3 -std=c++20
+CFLAGS := -g --coverage -Wall -O3 -std=c++14
 INC := -I include/ -I third_party/
 
 $(OBJDIR)/%.o: $(SRCDIR)/%.$(SRCEXT)
@@ -26,7 +26,6 @@ main: $(OBJECTS)
 
 tests: $(OBJECTS)
 	@mkdir -p $(BINDIR)
-	$(CC) $(CFLAGS) $(INC) $(TESTER) $(TSTSOURCES) $^ -o $(BINDIR)/tester
 	$(BINDIR)/tester
 
 all: main

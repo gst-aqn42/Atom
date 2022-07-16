@@ -1,13 +1,13 @@
-#include "doctest.h"
+#include "/home/ozymandias/C++/PDSII/Atom/VPL/Prova 2/third_party/doctest.h"
 
-#include "Forma.hpp"
-#include "Forma2D.hpp"
-#include "Forma3D.hpp"
-#include "Quadrado.hpp"
-#include "triangulo.h"
-#include "cubo.h"
-#include "esfera.h"
-#include "Circulo.hpp"
+#include "/home/ozymandias/C++/PDSII/Atom/VPL/Prova 2/include/Forma.hpp"
+#include "/home/ozymandias/C++/PDSII/Atom/VPL/Prova 2/include/Forma2D.hpp"
+#include "/home/ozymandias/C++/PDSII/Atom/VPL/Prova 2/include/Forma3D.hpp"
+#include "/home/ozymandias/C++/PDSII/Atom/VPL/Prova 2/include/Quadrado.hpp"
+#include "/home/ozymandias/C++/PDSII/Atom/VPL/Prova 2/include/Triangulo.hpp"
+#include "/home/ozymandias/C++/PDSII/Atom/VPL/Prova 2/include/Cubo.hpp"
+#include "/home/ozymandias/C++/PDSII/Atom/VPL/Prova 2/include/Esfera.hpp"
+#include "/home/ozymandias/C++/PDSII/Atom/VPL/Prova 2/include/Circulo.hpp"
 
 #include <string>
 #include <math.h>
@@ -27,6 +27,7 @@ TEST_CASE("01 - Testando construção de classes derivadas com seus respectivos 
 
 TEST_CASE("02 - Acessando métodos das classes base") {
     Triangulo t("azul", 6, 7, 8);
+    t.get_cor();
     CHECK((abs(t.get_area()-20.3331625676))<0.0001);
     CHECK(t.get_perimetro() == 21);
 

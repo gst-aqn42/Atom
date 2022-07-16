@@ -1,22 +1,27 @@
 #include "/home/ozymandias/C++/PDSII/Atom/VPL/Prova 2/include/Circulo.hpp"
 
-Circulo::Circulo(std::string &cor, double raio){
-  this->_cor = cor;
-  this->_raio= raio;
-  this->_nome = "circulo";
-
-  set_area_circulo(raio);
-  set_perimetro_circulo(raio);
+Circulo::Circulo(std::string cor, int raio){
+  _cor = cor;
+  _nome = "circulo";
+  _area = (3.141592)*(raio*raio);
+  _perimetro = 2*(3.141592)*(raio);
 }
 
 Circulo::~Circulo(){
 }
 
-void Circulo::set_area_circulo(double raio){
-  double area = (14.1592)*(raio*raio); //area = pi*(raio*raio)
-  set_area(area);
+double Circulo::get_area(){
+ return _area;
 }
 
-void Circulo::set_perimetro_circulo(double raio){
+double Circulo::get_perimetro(){
+  return _perimetro;
+}
 
+std::string Circulo::get_cor(){
+  return _cor;
+}
+
+std::string Circulo::get_nome(){
+  return _nome;
 }
