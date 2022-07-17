@@ -3,7 +3,7 @@
 Esfera::Esfera(std::string cor, int raio){
   _cor = cor;
   _nome = "esfera";
-  _volume = ((1.333)*(3.141592)*(raio*raio*raio));
+  _volume = ((1.33333)*(3.141592)*(raio*raio*raio));
 }
 
 Esfera::~Esfera(){
